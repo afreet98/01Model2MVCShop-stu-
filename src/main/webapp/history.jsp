@@ -13,6 +13,9 @@
 <%
 	request.setCharacterEncoding("euc-kr");
 	response.setCharacterEncoding("euc-kr");
+	
+	
+	
 	String history = null;
 	Cookie[] cookies = request.getCookies();
 	if (cookies!=null && cookies.length > 0) {

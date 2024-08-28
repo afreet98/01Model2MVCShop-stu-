@@ -20,7 +20,7 @@ public class PurchaseDAO {
 		
 		Connection con = DBUtil.getConnection();
 		//
-		String sql = "insert into product values (seq_purchase_tran_no.NEXTVAL,?,?,?,?,?,?,?,?)";
+		String sql = "insert into transaction values (seq_purchase_tran_no.NEXTVAL,?,?,?,?,?,?,?,?)";
 		
 		PreparedStatement stmt = con.prepareStatement(sql);
 		stmt.setInt(1, purchaseVO.getPurchaseProd().getProdNo());//

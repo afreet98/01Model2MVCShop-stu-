@@ -137,7 +137,7 @@
 				<% }else {%>
 				
 				<td background="/images/ct_btnbg02.gif" class="ct_btn01" style="padding-top: 3px;">
-					<a href="/addPurchaseView.do?prod_no=<%=po.getProdNo()%>">구매</a>
+					<a href="/addPurchaseView.do?prodNo=<%=po.getProdNo()%>">구매</a>
 				</td>
 				
 				<% } %>
