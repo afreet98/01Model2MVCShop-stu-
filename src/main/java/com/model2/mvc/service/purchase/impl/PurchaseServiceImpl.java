@@ -19,11 +19,11 @@ public class PurchaseServiceImpl implements PurchaseService{
 	public void addPurchase(PurchaseVO purchaseVO) throws Exception {
 		purchaseDAO.insertPurchase(purchaseVO);
 	}
-	/*
-	public HashMap<String,Object> getProductList(SearchVO searchVO) throws Exception {
-		return productDAO.getProductList(searchVO);
-	}
 	
+	public HashMap<String,Object> getProductList(SearchVO String) throws Exception {
+		return purchaseDAO.getPurchaseList(String);
+	}
+	/*
 	public void updateProduct(ProductVO productVO) throws Exception {
 		productDAO.updateProduct(productVO);
 	}

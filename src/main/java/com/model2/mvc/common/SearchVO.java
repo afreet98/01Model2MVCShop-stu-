@@ -3,15 +3,15 @@ package com.model2.mvc.common;
 
 public class SearchVO {
 	
-	private int page;
+	private int page; //현재 페이지
 	String searchCondition;
 	String searchKeyword; //상품을 찾기 위한 
-	int pageUnit;
+	int pageUnit; //
 	
 	public SearchVO(){
 	}
 	
-	public int getPageUnit() {
+	public int getPageUnit() { 
 		return pageUnit;
 	}
 	public void setPageUnit(int pageUnit) {

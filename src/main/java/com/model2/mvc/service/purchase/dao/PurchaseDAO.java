@@ -38,24 +38,14 @@ public class PurchaseDAO {
 		con.close();
 	}
 	
-	/*
+
 	
 	
-	public HashMap<String,Object> getProductList(SearchVO searchVO) throws Exception {
+	public HashMap<String,Object> getPurchaseList(SearchVO searchVO) throws Exception {
 		
 		Connection con = DBUtil.getConnection();
 		
-		String sql = "select * from product ";
-		if (searchVO.getSearchCondition() != null) {
-			if (searchVO.getSearchCondition().equals("0")) {
-				sql += " where prod_name='" + searchVO.getSearchKeyword()
-						+ "'";
-			} else if (searchVO.getSearchCondition().equals("1")) {
-				sql += " where prod_name='" + searchVO.getSearchKeyword()
-						+ "'";
-			}
-		}
-		sql += " order by prod_name";
+		String sql = "select * from purchase ";
 
 		PreparedStatement stmt = 
 			con.prepareStatement(	sql,
@@ -74,17 +64,20 @@ public class PurchaseDAO {
 		System.out.println("searchVO.getPage():" + searchVO.getPage());
 		System.out.println("searchVO.getPageUnit():" + searchVO.getPageUnit());
 
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		ArrayList<PurchaseVO> list = new ArrayList<PurchaseVO>();
 		if (total > 0) {
 			for (int i = 0; i < searchVO.getPageUnit(); i++) {
-				ProductVO po = new ProductVO();
-				po.setProdNo(Integer.parseInt(rs.getString("prod_no")));
-				po.setFileName(rs.getString("image_file"));
-				po.setManuDate(rs.getString("manufacture_day"));
-				po.setPrice(Integer.parseInt(rs.getString("price")));
-				po.setProdDetail(rs.getString("prod_detail"));
-				po.setProdName(rs.getString("prod_name"));
-				po.setRegDate(rs.getDate("reg_date"));
+				PurchaseVO pv = new PurchaseVO();
+				pv.setTranNo(Integer.parseInt(rs.getString("tran_no")));
+				pv.setBuyer(rs.getString("buyer_id"));
+				pv.setManuDate(rs.getString("payment_option"));
+				pv.setPrice(Integer.parseInt(rs.getString("receiver_name")));
+				pv.setProdDetail(rs.getString("receiver_phone"));
+				pv.setProdName(rs.getString("demailaddr"));
+				pv.setRegDate(rs.getDate("dlvy_request"));
+				pv.setRegDate(rs.getDate("tran_status_code"));
+				pv.setRegDate(rs.getDate("order_data"));
+				pv.setRegDate(rs.getDate("dlvy_date"));
 
 				list.add(po);
 				if (!rs.next())
@@ -99,7 +92,7 @@ public class PurchaseDAO {
 			
 		return map;
 	}
-	
+	/*
 
 	public void updateProduct(ProductVO productVO) throws Exception {
 		

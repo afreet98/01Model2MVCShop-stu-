@@ -24,7 +24,6 @@ public class AddPurchaseAction extends Action {
 												HttpServletResponse response) throws Exception {
 		
 		int prodNo=Integer.parseInt(request.getParameter("prodNo"));
-		
 		ProductService Product=new ProductServiceImpl();
 		ProductVO po=Product.getProduct(prodNo);
 		

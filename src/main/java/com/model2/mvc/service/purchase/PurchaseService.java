@@ -11,7 +11,7 @@ public interface PurchaseService {
 	public void addPurchase(PurchaseVO purchaseVO) throws Exception;
 	
 	
-	//public HashMap<String, Object> getProductList(SearchVO searchVO) throws Exception;
+	public HashMap<String, Object> getPurchaseList(SearchVO String) throws Exception;
 	
 	//public void updateProduct(ProductVO productVO) throws Exception;
 	
