@@ -15,7 +15,7 @@ public class PurchaseDAO {
 	
 	public PurchaseDAO(){
 	}
-
+ 
 	public void insertPurchase(PurchaseVO purchaseVO) throws Exception {
 		
 		Connection con = DBUtil.getConnection();
