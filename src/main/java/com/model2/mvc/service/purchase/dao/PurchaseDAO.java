@@ -38,7 +38,7 @@ public class PurchaseDAO {
 		con.close();
 	}
 	
-
+   
 	
 	
 	public HashMap<String,Object> getPurchaseList(SearchVO searchVO) throws Exception {
